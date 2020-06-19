@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -16,6 +17,7 @@ body{
 
 h1{
     color:hsl(234, 12%, 34%);
+    padding-bottom: 0.5em;
 }
 
 h2{
@@ -33,19 +35,22 @@ p {
 }
 
 header{
-    width: 80% auto;
+    max-width: 500px;
+    margin: auto;
     text-align: center;
-    padding: 3em 0px 4em;
+    padding: 4em 0px 4em;
 }
 
 header p{
-    font-size: small;
+    width: 60% auto;
 }
 
 main{
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
-    align-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -60,70 +65,47 @@ main{
     flex-direction: column;
 }
 
+.card:nth-child(odd){
+    transform: translateY(50%);
+}
+
 .card p{
     font-size: small;
 }
 
-.one{
+.card:nth-child(1){
     border-top: 4px solid hsl(180, 62%, 55%);
 }
-.two{
+.card:nth-child(2){
     border-top: 4px solid hsl(0, 78%, 62%);
 }
-.three{
-    border-top: 4px solid hsl(34, 97%, 64%);
-}
-.four{
+.card:nth-child(3){
     border-top: 4px solid hsl(212, 86%, 64%);
 }
+.card:nth-child(4){
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
 
-.icon{
+img{
     width: 60px;
     height: 60px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-left: auto;
     margin-top: auto;
 }
 
-.one .icon{
-    background-image: url(images/icon-supervisor.svg);
-}
-
-.two .icon{
-    background-image: url(images/icon-team-builder.svg);
-}
-
-.three .icon{
-    background-image: url(images/icon-karma.svg);
-}
-
-.four .icon{
-    background-image: url(images/icon-calculator.svg);
-}
-
 .attribution{
-    font-size: smaller;
+    margin-top: 30px;
+    font-size: x-small;
+    text-align: center;
+}
+
+.attribution a{
+    text-decoration: none;
 }
 
 @media (max-width: 375px) {
+    .card:nth-child(odd){
+        transform: translateY(0);
+    }
 
-    h1, h2{
-        font-size: 1.5em;
-    }
-    h1{
-        padding-bottom: 0.75em;
-    }
-    main {
-      display: inline;
-    }
-    .card{
-        width: 250px;
-        height: 150px;
-        margin: 2em  auto;
-    }
-    footer{
-        font-size: smaller;
-    }
 }
