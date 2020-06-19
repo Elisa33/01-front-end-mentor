@@ -7,6 +7,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     background-color: hsl(0, 0%, 98%);
     color:hsl(229, 6%, 66%);
     width: 80%;
@@ -32,8 +33,9 @@ p {
 }
 
 header{
+    width: 80% auto;
     text-align: center;
-    padding: 120px 300px 80px;
+    padding: 3em 0px 4em;
 }
 
 header p{
@@ -103,4 +105,25 @@ main{
 
 .attribution{
     font-size: smaller;
+}
+
+@media (max-width: 375px) {
+
+    h1, h2{
+        font-size: 1.5em;
+    }
+    h1{
+        padding-bottom: 0.75em;
+    }
+    main {
+      display: inline;
+    }
+    .card{
+        width: 250px;
+        height: 150px;
+        margin: 2em  auto;
+    }
+    footer{
+        font-size: smaller;
+    }
 }
