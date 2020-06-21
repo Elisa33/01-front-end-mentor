@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
 
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+}
+
+
 *{
     padding: 0;
     margin: 0;
@@ -48,8 +57,8 @@ main{
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -64,25 +73,21 @@ main{
     flex-direction: column;
 }
 
-.card:nth-child(odd){
-    transform: translateY(50%);
-}
-
 .card p{
     font-size: small;
 }
 
-.card:nth-child(1){
-    border-top: 4px solid hsl(180, 62%, 55%);
+.one{
+    border-top: 4px solid var(--Cyan);
 }
-.card:nth-child(2){
-    border-top: 4px solid hsl(0, 78%, 62%);
+.two{
+    border-top: 4px solid var(--Red);
 }
-.card:nth-child(3){
-    border-top: 4px solid hsl(212, 86%, 64%);
+.three{
+    border-top: 4px solid var(--Orange);
 }
-.card:nth-child(4){
-    border-top: 4px solid hsl(34, 97%, 64%);
+.four{
+    border-top: 4px solid var(--Blue);
 }
 
 img{
@@ -103,9 +108,11 @@ img{
 }
 
 @media (max-width: 375px) {
-    .card:nth-child(odd){
-        transform: translateY(0);
+
+    main{
+        flex-direction: column;
     }
+
     h1, h2{
         font-size: 1.5em;
     }
